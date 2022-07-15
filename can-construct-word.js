@@ -1,21 +1,19 @@
 "use strict";
 
-/** accept two strings, determine whether string1 can be made from characters
- * in string 2.
- * return true/false
- */
-
 // psuedo: check if word is empty
 //convert both strings to frequency objects (use helper function),
 // loop through object 1
 // compare key:values,
 // if each in obj1 is less than or equal to obj 2, return true
 
-
+/** accept two strings, determine whether string1 can be made from characters
+ * in string 2.
+ * return true/false
+ */
 
 function canConstructWord(word, letters) {
 
-  if (letters.length === 0) return false;
+  if (word.length > letters.length) return false;
 
   let wordObj = getFrequencyCounter(word);
   let lettersObj = getFrequencyCounter(letters);
